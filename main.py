@@ -31,9 +31,20 @@ simulation = Simulation(world)
 for _ in range(10):
     simulation.step()
 
+    if kevin.age < 0:
+                print("kevin died")
+                exit()
+
     for kevin in world.blobs:
         print(
             f"Tick {simulation.tick}: "
             f"({kevin.x:.2f}, {kevin.y:.2f}) "
             f"age={kevin.age}"
+            f"energy={kevin.energy}"
+        )
+
+    for food in world.food:
+        print(
+            f"food on x:{food.x} "
+            f"food on y:{food.y}"
         )

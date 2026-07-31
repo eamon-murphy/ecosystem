@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from models import Organism
+from models.organism import Organism
 
 @dataclass
 class Food(Organism):

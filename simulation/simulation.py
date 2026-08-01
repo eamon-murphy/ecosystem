@@ -11,6 +11,9 @@ class Simulation:
 
     def step(self) -> None:
         for blob in self.world.blobs:
+
+            self.move_blobs()
+
             for food in self.world.food:
                 if int(blob.x) == int(food.x) and int(blob.y) == int(food.y):
                      blob.energy += food.energy
